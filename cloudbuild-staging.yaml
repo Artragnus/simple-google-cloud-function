@@ -18,5 +18,6 @@ steps:
       - --runtime=nodejs20
       - --entry-point=main
       - --allow-unauthenticated
+      - --trigger-http
 options:
   logging: CLOUD_LOGGING_ONLY
