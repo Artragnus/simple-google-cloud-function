@@ -1,0 +1,24 @@
+steps:
+  - name: "node"
+    entrypoint: "npm"
+    args: ["install"]
+
+  - name: "node"
+    entrypoint: "npm"
+    args: ["run", "build"]
+
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - update-face
+      - --gen2
+      - --region=us-central1
+      - --trigger-topic=just-tec-update
+      - --runtime=nodejs20
+      - --entry-point=startIntegration
+      - --env-vars-file=.env.yaml
+      - --allow-unauthenticated
+options:
+  logging: CLOUD_LOGGING_ONLY
