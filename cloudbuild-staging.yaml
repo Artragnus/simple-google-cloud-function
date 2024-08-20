@@ -12,13 +12,11 @@ steps:
       - gcloud
       - functions
       - deploy
-      - update-face
+      - my-function
       - --gen2
       - --region=us-central1
-      - --trigger-topic=just-tec-update
       - --runtime=nodejs20
-      - --entry-point=startIntegration
-      - --env-vars-file=.env.yaml
+      - --entry-point=main
       - --allow-unauthenticated
       - --dry-run
 options:
