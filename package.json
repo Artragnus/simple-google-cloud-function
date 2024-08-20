@@ -4,5 +4,15 @@
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.4.2"
-  }
+  },
+  "name": "simple-google-cloud-function",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
