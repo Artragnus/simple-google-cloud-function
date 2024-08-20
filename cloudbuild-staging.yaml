@@ -18,6 +18,5 @@ steps:
       - --runtime=nodejs20
       - --entry-point=main
       - --allow-unauthenticated
-      - --dry-run
 options:
   logging: CLOUD_LOGGING_ONLY
